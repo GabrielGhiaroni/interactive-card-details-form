@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    background-image: url('/images/bg-main-desktop.png');
+    background-repeat: repeat-y;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.div-pai {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.cards {
+    width: 600px
+}
+
+.card-front {
+    margin-top: 190px;
+    background-image: url('/images/bg-card-front.png');
+    background-repeat: no-repeat;
+    height: 245px;
+    max-width: 400px;
+    padding: 32px 30px;
+    color: white;
+
+}
+
+.card-front-img {
+    padding-bottom: 32px;
+}
+
+.card-front h2 {
+    letter-spacing: 3px;
+    font-size: 28px;
+    line-height: 36px;
+}
+
+.card-front span {
+    letter-spacing: 2px;
+    font-size: 14px;
+
+}
+
+.name-expiration {
+    display: flex;
+    justify-content: space-between
+}
+
+.card-back {
+    background-image: url('/images/bg-card-back.png');
+    background-repeat: no-repeat;
+    height: 245px;
+    max-width: 400px;
+    color: white;
+    padding: 111px 57px 116px 358px;
+    margin-left: 80px;
+}
+
+.dados {
+    max-width: 380px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    border: none;
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 15px 156px;
+    border-radius: 6px;
+    background-color: #21092F;
+    color: white;
+    width: 380px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #341147;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #DFDEE0;
+    border-radius: 8px;
+    margin-bottom: 26px;
+    padding: 11px;
+}
+
+input::placeholder {
+    color: #21092F;
+    opacity: 0.25;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.validade-seguranca {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.valido-data {
+    display: flex;
+    gap: 10px;
+}
+
+input:focus {
+    border-image-source: linear-gradient(hsl(249, 99%, 64%) to hsl(278, 94%, 30%))
+}
+
+.erro {
+    font-style: italic;
+    font-size: 10px;
+    color: tomato;
+}

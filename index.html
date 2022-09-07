@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+
+<body>
+  <div class="div-pai">
+
+    <div class="cards">
+      <div class="card-front">
+        <div class="card-front-img">
+          <img src="/images/card-logo.svg" alt="card-logo">
+        </div>
+        <h2>0000 0000 0000 0000</h3>
+          <div class="name-expiration">
+            <span id="nome-cartao">JULIETTE DO BBB</span>
+            <span><span id="mes">00</span>/<span id="ano">00</span></span>
+          </div>
+      </div>
+      <div class="card-back">
+        <span>000</span>
+      </div>
+    </div>
+
+    <div class="dados">
+      <label for="">NOME DO PROPRIETÁRIO</label>
+      <input type="text" id="nome" placeholder="Ana Maria Braga">
+      <span id="nome-erro"></span>
+      <label for="">NÚMERO DO CARTÃO</label>
+      <input type="text" id="numero-cartao" placeholder="1234 5678 9123 0000" maxlength="16">
+      <span id="numero-cartao-erro"></span>
+      <div class="validade-seguranca">
+        <div class="validade">
+          <label for="data">VALIDO ATÉ</label>
+          <div class="valido-data">
+            <input type="text" id="data-mes" placeholder="MM" maxlength="2">
+            <input type="text" id="data-ano" placeholder="YY" maxlength="2">
+            <span id="mes-ano-erro"></span>
+          </div>
+        </div>
+        <div class="codigo">
+          <label for="codigo">CVC</label>
+          <input type="text" id="codigo" placeholder="123" minlength="3" maxlength="3">
+        </div>
+      </div>
+      <button type="submit">Confirm</button>
+    </div>
+
+  </div>
+  </div>
+</body>
+
+</html>
