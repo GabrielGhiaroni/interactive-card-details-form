@@ -4,7 +4,8 @@ const mesValidade = document.getElementById('mes');
 const anoValidade = document.getElementById('ano');
 const codigoSeguranca = document.querySelector('.card-back span');
 
-const erroNumeroCartao = document.getElementById('numero-cartao-erro')
+const erroNumeroCartao = document.getElementById('numero-cartao-erro');
+const erroAnoCartao = document.getElementById('ano-cartao-erro');
 
 const inputNome = document.getElementById('nome');
 const inputNumeroCartao = document.getElementById('numero-cartao');
@@ -68,19 +69,31 @@ function mudarMesCartao(mesDigitado) {
     };
 };
 
-inputAno.addEventListener('keyup', handleKeyupAno);
+inputAno.addEventListener('change', handleChangeAno);
 
-function handleKeyupAno(e) {
+function handleChangeAno(e) {
     const anoDigitado = e.target.value;
     mudarAnoCartao(anoDigitado);
 };
 
 function mudarAnoCartao(anoDigitado) {
-    if (inputAno.value.length > 0) {
-        anoValidade.innerText = anoDigitado;
-    } else {
+    console.log('evento')
+    const anoDigitadoNumber = +anoDigitado
+
+    if (anoDigitadoNumber <= 21 || !anoDigitadoNumber) {
+        erroAnoCartao.innerText = 'Insira um ano válido.';
+        erroAnoCartao.classList.add('erro');
+    };
+
+    if (inputAno.value.length === 0) {
+        erroAnoCartao.outerText = ''
         anoValidade.innerText = '00';
     };
+
+    if (anoDigitadoNumber >= 22) {
+        erroAnoCartao.outerText = ''
+        anoValidade.innerText = anoDigitadoNumber;
+    }
 };
 
 inputCodigoSeguranca.addEventListener('keyup', handleKeyupCVC);
